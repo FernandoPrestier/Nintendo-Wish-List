@@ -37,3 +37,31 @@ $nintendo-wish-list-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$red-nintendo : rgb(230, 0, 18);
+$gray-nintendo-200 : rgba(218, 218, 218,0.5);
+$gray-nintendo-400 : rgb(218, 218, 218);
+$gray-nintendo-600 : rgb(72, 72, 72);
+$shadow-variant-1: 0 0 10px rgba(72, 72, 72, 0.3);
+
+.ml {
+    margin-left: 0;
+
+    &-10p {
+        margin-left: 10px;
+    }
+    &-auto{
+        margin-left: auto;
+    }
+}
+
+.mr {
+    margin-right: 0;
+
+    &-20p {
+        margin-right: 20px;
+    }
+    &-auto{
+        margin-left: auto;
+    }
+}
