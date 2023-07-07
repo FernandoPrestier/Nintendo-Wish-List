@@ -1,0 +1,23 @@
+@import '/src/styles.scss';
+
+.pool {
+    display: flex;
+    gap: 0.5rem;
+    .item {
+        &:last-child svg{
+            display: none;
+        }
+        a, span {
+            text-decoration: none;
+            color: $gray-nintendo-300;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        span {
+            color: $gray-nintendo-600;
+        }
+        svg {
+            margin-left: 8px;
+        }
+    }
+}

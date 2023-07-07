@@ -1,0 +1,5 @@
+@import '/src/styles.scss';
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    .hide-mobile{ display: none; }
+}

@@ -1,0 +1,36 @@
+<div class="list">
+    <div class="button-clear-all">
+        <div class="svg-box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" role="presentation" alt="" size="8" color="currentColor">
+                <path fill="currentColor" d="M32 4.53L27.47 0 16 11.47 4.53 0 0 4.53 11.47 16 0 27.47 4.53 32 16 20.53 27.47 32 32 27.47 20.53 16 32 4.53z"></path>
+            </svg>
+        </div>
+        Borrar Todo
+    </div>
+
+    <details open *ngFor="let detail of data">
+        <summary>
+            <span>
+                {{ detail.title }}
+            </span>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="17" role="presentation" alt="" size="17" color="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M27.7 5.3L32 9.8 16 26.7 0 9.8l4.3-4.5L16 17.7z"></path>
+            </svg>
+        </summary>
+
+        <div class="pool-items">
+            <div class="item" *ngFor="let item of detail.items">
+                <input type="checkbox">
+                <div class="text">
+                    {{ item.text }}
+                    
+                    <span class="count">
+                        {{ item.count }}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </details>
+</div>

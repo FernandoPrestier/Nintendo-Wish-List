@@ -1,0 +1,90 @@
+@import '/src/styles.scss';
+
+.list {
+    height: calc(100vh - 100px);
+    position: sticky;
+    top: 100px;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    background-color: $gray-nintendo-500;
+    overflow-y: auto;
+
+    .button-clear-all {
+        cursor: pointer;
+        width: fit-content;
+        margin: 0 auto 16px auto;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $gray-nintendo-300;
+        opacity: 0.5;
+        .svg-box {
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: $gray-nintendo-300;
+            svg {
+                color: $gray-nintendo-400;
+                width: 8px;
+                height: 8px;
+            }
+        }
+    }
+
+    details {
+        background-color: white;
+        padding: 1.25rem 1rem;
+        border-top: 2px solid $gray-nintendo-400;
+
+        &[open] summary {
+            svg { rotate: 180deg; }
+        }
+        summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            color: $gray-nintendo-600;
+            
+            &::-webkit-details-marker { display: none; }
+            svg { transition:rotate 0.2s ease; }
+            span {
+                width: 100%;
+                font-weight: 500;
+            }
+        }
+        .pool-items {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .item {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                input {
+                    width: 22px;
+                    height: 22px;
+                }
+
+                .text {
+                    width: 100%;
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: $gray-nintendo-600;
+                    span {
+                        color: $gray-nintendo-300;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

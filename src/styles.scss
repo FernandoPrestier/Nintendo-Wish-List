@@ -39,10 +39,20 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 $red-nintendo : rgb(230, 0, 18);
+$red-nintendo-hover : rgb(172, 0, 13);
 $gray-nintendo-200 : rgba(218, 218, 218,0.5);
+$gray-nintendo-200-200 : rgb(109, 109, 109);
+$gray-nintendo-300 : rgb(114, 114, 114);
 $gray-nintendo-400 : rgb(218, 218, 218);
+$gray-nintendo-500 : rgb(239, 239, 239);
 $gray-nintendo-600 : rgb(72, 72, 72);
+$gray-nintendo-700 : rgb(36, 36, 36);
 $shadow-variant-1: 0 0 10px rgba(72, 72, 72, 0.3);
+$breakpoint-mobile : 1100px;
+
+* {
+    box-sizing: border-box;
+}
 
 .ml {
     margin-left: 0;
@@ -63,5 +73,50 @@ $shadow-variant-1: 0 0 10px rgba(72, 72, 72, 0.3);
     }
     &-auto{
         margin-left: auto;
+    }
+}
+
+.mt {
+    margin-right: 0;
+
+    &-48p {
+        margin-top: 48px;
+    }
+
+    &-32p {
+        margin-top: 32px;
+    }
+
+    &-99p {
+        margin-top: 99px;
+    }
+}
+
+.py {
+    padding-top: 0;
+    padding-bottom: 0;
+    &-10p {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.maxWidth90 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90rem;
+    width: 96%;
+}
+
+.maxWidth72 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 72rem;
+    width: 96%;
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    .maxWidth90 {
+        width: 96%;
     }
 }

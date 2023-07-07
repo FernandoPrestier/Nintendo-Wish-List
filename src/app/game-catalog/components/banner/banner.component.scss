@@ -1,0 +1,46 @@
+@import '/src/styles.scss';
+
+.backdrop {
+    width: 100%;
+    background-color: $red-nintendo;
+    .contentflex {
+        display: flex;
+        align-items: center;
+
+        .text {
+            width: 50%;
+            height: fit-content;
+            padding: 2rem;
+            color: white;
+            background-color: rgba(0,0,0,0.6);
+            border-radius: 0.25rem;
+            h1 {
+                font-size: 2.375rem;
+                font-weight: 500;
+                line-height: 1.35;
+            }
+            p{
+                line-height: 1.4;
+            }
+        }
+
+        picture {
+            width: 50%;
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    .backdrop .contentflex {
+        flex-direction: column;
+        gap: 0.5rem;
+        .text, picture {
+            width: calc(100% - 32px);
+            margin: 16px;
+        }
+    }
+}
