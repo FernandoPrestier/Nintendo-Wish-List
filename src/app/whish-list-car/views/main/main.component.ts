@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {mockItems} from './mockData'
+
+import { Store } from '@ngrx/store';
+import * as wishActions from "../../../state/actions/wish.actions";
+import { AppState } from 'src/app/state/app.reducer';
 
 @Component({
   selector: 'app-main',
@@ -15,12 +18,32 @@ export class MainComponent implements OnInit {
 
   favoriteIsOn = false;
 
-  itemsMock = mockItems;
+  itemsMock:wishActions.IitemGame[];
   
-  constructor() { }
+  constructor(
+    private store: Store<AppState>
+  ) { 
+    this.itemsMock = []
+
+    this.store.select('State','whished').subscribe( e => {
+      this.itemsMock = e;
+
+      console.log(this.itemsMock);
+      
+    })
+  }
   
   ngOnInit(): void {
-    this.itemsMock = [];
+    
+  }
+
+  toogleFavorite(item: any): void{
+    if (item.isFavorite) {
+      this.store.dispatch(wishActions.setNotFavoriteAction({idMock: item.id}))
+    
+    }else{
+      this.store.dispatch(wishActions.setFavoriteAction({idMock: item.id}))
+    }
   }
 
   hasItem():boolean {
