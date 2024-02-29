@@ -122,7 +122,7 @@ export const catalogDataInitialState: IcatalogData = {
         },
         {
             id: "mock-10",
-            img: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_300/ncom/software/switch/70010000010192/f2aceaa07354abfa1652dbfb5acede2f4b2844db3c37780d538020f51814d510",
+            img: "/assets/fornite.avif",
             title: "FORNITE",
             date: "12/06/2018",
             version: {
@@ -135,7 +135,7 @@ export const catalogDataInitialState: IcatalogData = {
         },
         {
             id: "mock-11",
-            img: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.0/c_scale,w_300/ncom/software/switch/70010000042975/f365acdf12fbbb0cce6b4638a7d3756c6e0010a0f46cadc1fe3cafc6d40c1b7e",
+            img: "/assets/fallguys.avif",
             title: "Fall Guys",
             date: "21/06/2022",
             version: {
